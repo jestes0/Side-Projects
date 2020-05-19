@@ -2,10 +2,23 @@
 
 using namespace std;
 
+int formula_proc(int num)
+{
+
+  if (num < 0)
+    num = num + 88 - 54;
+
+  else
+    num = num - 5 + 8;
+
+  num = num * 5 + 8;
+
+  return num;
+}
 
 int main() {
 
-  int number;
+  int number, result;
 
   cout << "Enter in an integer value.\n";
   cin >> number;
@@ -19,9 +32,9 @@ do {
   }
 }while(cin.fail());
 
-number = number + 45 - 15;
+result = formula_proc(number);
 
-cout<<number<<" Is your new number.\n";
+cout<<result<<" Is your new number.\n";
 
   return 0;
 }
