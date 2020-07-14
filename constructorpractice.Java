@@ -27,6 +27,8 @@ public class Cars{
      model = modelName.nextLine();  // Read user input
     Scanner myYear = new Scanner(System.in);  // Creates the Scanner object
 
+
+try {
     do {
       System.out.println("Please enter a valid Year.");
 
@@ -38,6 +40,11 @@ public class Cars{
       year = myYear.nextInt();
     } while (year <= 0);
 
+}
+catch (Exception e){
+  System.out.println("An Unknown error has occurred.");
+
+}
     obj[0] = new Cars(model, year);
     System.out.println("Car Object 1: ");
     System.out.println("Model: " + model + "Year: " + year);
